@@ -133,6 +133,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install workspace dependencies
+          command: |
+            sudo apt-get install -y tar
+      - run:
           name: Ensure back-end infrastructure exists
           command: |
             aws cloudformation deploy \
