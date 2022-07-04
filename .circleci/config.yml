@@ -312,7 +312,7 @@ jobs:
     docker:
       - image: amazon/aws-cli
     steps:
-      - checkou
+      - checkout
       - run:
           name: Update cloudfront distribution
           command: |
