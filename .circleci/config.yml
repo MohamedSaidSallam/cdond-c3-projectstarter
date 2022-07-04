@@ -135,7 +135,7 @@ jobs:
       - run:
           name: Install workspace dependencies
           command: |
-            sudo apt-get install -y tar
+            apt-get install -y tar
       - run:
           name: Ensure back-end infrastructure exists
           command: |
@@ -217,7 +217,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            sudo apt-get install -y nodejs
+            apt-get install -y nodejs
       - run:
           name: Get backend url
           command: |
