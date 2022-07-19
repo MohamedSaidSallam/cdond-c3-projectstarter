@@ -231,7 +231,7 @@ jobs:
             export BACKEND_IP=$(sed -n '2p' /tmp/workspace/inventory.txt)
             export API_URL="http://${BACKEND_IP}:3030"
             echo "API_URL = ${API_URL}"
-            echo API_URL="http://${BACKEND_IP}:3030" >> frontend/.env
+            echo API_URL="${API_URL}" >> frontend/.env
 
       - restore_cache:
           keys: [frontend-build]
