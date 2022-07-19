@@ -9,6 +9,8 @@ commands:
         type: string
         default: ${CIRCLE_WORKFLOW_ID:0:7}
     steps:
+      - install_aws_cli:
+          when: on_fail
       - run:
           name: Destroy environments
           when: on_fail
