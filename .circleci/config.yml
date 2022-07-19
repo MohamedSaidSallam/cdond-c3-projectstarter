@@ -2,6 +2,20 @@ version: 2.1
 orbs:
   slack: circleci/slack@4.10.1
 commands:
+  install_aws_cli:
+    description: Install AWS CLI v2
+    parameters:
+      when:
+        type: string
+        default: "on_success"
+    steps:
+      - run:
+          name: Install AWS CLI v2
+          when: <<when>>
+          command: |
+            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip awscliv2.zip
+            sudo ./aws/install
   destroy-environment:
     description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
     parameters:
@@ -10,7 +24,7 @@ commands:
         default: ${CIRCLE_WORKFLOW_ID:0:7}
     steps:
       - install_aws_cli:
-          when: on_fail
+          when: "on_fail"
       - run:
           name: Destroy environments
           when: on_fail
@@ -39,20 +53,6 @@ commands:
               npm install
               npm run migrations:revert
             fi
-  install_aws_cli:
-    description: Install AWS CLI v2
-    parameters:
-      when:
-        type: string
-        default: on_success
-    steps:
-      - run:
-          name: Install AWS CLI v2
-          when: <<when>>
-          command: |
-            curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-            unzip awscliv2.zip
-            sudo ./aws/install
 jobs:
   build-frontend:
     docker:
