@@ -7,14 +7,9 @@
 - name: Copy and unarchive artifact
   unarchive:
     src: ../../artifact.tar.gz
-    dest: ~/backend/
-
-# not really needed since the infrastructure is created each time
-- name: Stop Previous PM2
-  command: pm2 delete default
-  ignore_errors: yes
+    dest: ~/backend
 
 - name: Start PM2
-  command: |
+  shell: |
     cd ~/backend/dist
     pm2 start main.js
