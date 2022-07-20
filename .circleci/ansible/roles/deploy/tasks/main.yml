@@ -1,5 +1,10 @@
 ---
-- name: Copy and Install Java
+- name: Creates backend directory
+  file:
+    path: ~/backend/
+    state: directory
+
+- name: Copy and unarchive artifact
   become: true
   unarchive:
     src: ../../artifact.tar.gz
