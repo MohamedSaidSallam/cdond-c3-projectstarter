@@ -1,0 +1,14 @@
+---
+- name: Copy and Install Java
+  become: true
+  unarchive:
+    src: ../../artifact.tar.gz
+    dest: ~/backend/
+    mode: "0777"
+
+- name: Stop Previous PM2
+  command: pm2 delete default
+  ignore_errors: yes
+
+- name: Start PM2
+  command: pm2 start npm -- start
