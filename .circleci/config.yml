@@ -261,6 +261,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
+            sudo apt update
             sudo apt install -y ansible
       - restore_cache:
           keys: [backend-build]
