@@ -9,11 +9,6 @@
     src: ../../artifact.tar.gz
     dest: ~/backend/
 
-# not really needed since the infrastructure is created each time
-- name: Stop Previous PM2
-  command: pm2 delete default
-  ignore_errors: yes
-
 - name: Start PM2
   command: |
     cd ~/backend/dist
