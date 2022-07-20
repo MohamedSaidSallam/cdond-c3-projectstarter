@@ -284,13 +284,9 @@ jobs:
 
   smoke-test:
     docker:
-      - image: alpine:latest
+      - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: Install dependencies
-          command: |
-            apk --no-cache add curl
       - attach_workspace:
           at: /tmp/workspace
       - run:
@@ -312,7 +308,8 @@ jobs:
             echo ${URL}
             if curl -s ${URL} | grep "Welcome"
             then
-              return 0
+              # change to 0
+              return 1
             else
               return 1
             fi
