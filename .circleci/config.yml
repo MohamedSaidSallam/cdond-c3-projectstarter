@@ -294,13 +294,9 @@ jobs:
       - attach_workspace:
           at: /tmp/workspace
       - run:
-          name: Get backend url
-          command: |
-            export BACKEND_IP=$(sed -n '2p' /tmp/workspace/inventory.txt)
-      - run:
           name: Backend smoke test.
           command: |
-            # Fetch and prepare the BACKEND_IP env var
+            export BACKEND_IP=$(sed -n '2p' /tmp/workspace/inventory.txt)
             export API_URL="http://${BACKEND_IP}:3030"
             echo "${API_URL}"
             if curl "${API_URL}/api/status" | grep "ok"
