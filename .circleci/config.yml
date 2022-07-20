@@ -223,16 +223,12 @@ jobs:
 
   deploy-frontend:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:13.8.0
     steps:
       - checkout
       - install_aws_cli
       - attach_workspace:
           at: /tmp/workspace
-      - run:
-          name: Install dependencies
-          command: |
-            sudo apt install -y nodejs
       - run:
           name: Get backend url
           command: |
@@ -255,7 +251,7 @@ jobs:
 
   deploy-backend:
     docker:
-      - image: python:3.7-alpine3.11
+      - image: cimg/python:3.7-node
     steps:
       - checkout
       - add_ssh_keys:
@@ -265,9 +261,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --update ansible
-            apk add --no-cache tar
-            apk add --no-cache --update npm
+            sudo apt install -y ansible
       - restore_cache:
           keys: [backend-build]
       - run:
