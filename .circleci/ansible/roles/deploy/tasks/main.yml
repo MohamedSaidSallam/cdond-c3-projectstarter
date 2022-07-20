@@ -5,15 +5,16 @@
     state: directory
 
 - name: Copy and unarchive artifact
-  become: true
   unarchive:
     src: ../../artifact.tar.gz
     dest: ~/backend/
-    mode: "0777"
 
+# not really needed since the infrastructure is created each time
 - name: Stop Previous PM2
   command: pm2 delete default
   ignore_errors: yes
 
 - name: Start PM2
-  command: pm2 start npm -- start
+  command: |
+    cd ~/backend/dist
+    pm2 start main.js
