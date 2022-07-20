@@ -7,9 +7,9 @@
 - name: Copy and unarchive artifact
   unarchive:
     src: ../../artifact.tar.gz
-    dest: ~/backend/
+    dest: ~/backend
 
 - name: Start PM2
-  command: |
+  shell: |
     cd ~/backend/dist
     pm2 start main.js
