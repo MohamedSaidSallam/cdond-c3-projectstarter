@@ -1,3 +1,24 @@
+# UdaPeople
+
+## Screenshots
+
+![SCREENSHOT01](./screenshots/SCREENSHOT01.png)
+![SCREENSHOT02](./screenshots/SCREENSHOT02.png)
+![SCREENSHOT03](./screenshots/SCREENSHOT03.png)
+![SCREENSHOT04](./screenshots/SCREENSHOT04.png)
+![SCREENSHOT05](./screenshots/SCREENSHOT05.png)
+![SCREENSHOT06](./screenshots/SCREENSHOT06.png)
+![SCREENSHOT07](./screenshots/SCREENSHOT07.png)
+![SCREENSHOT08](./screenshots/SCREENSHOT08.png)
+![SCREENSHOT09](./screenshots/SCREENSHOT09.png)
+![SCREENSHOT10](./screenshots/SCREENSHOT10.png)
+![SCREENSHOT11](./screenshots/SCREENSHOT11.png)
+![SCREENSHOT12](./screenshots/SCREENSHOT12.png)
+![SCREENSHOT__service-discovery](./screenshots/SCREENSHOT__service-discovery.png)
+![URL03_SCREENSHOT](./screenshots/URL03_SCREENSHOT.png)
+![URL04_SCREENSHOT](./screenshots/URL04_SCREENSHOT.png)
+![URL05_SCREENSHOT](./screenshots/URL05_SCREENSHOT.png)
+
 We are archiving this repository because we do not want learners to push personal development to the current repository. If you have any issues or suggestions to make, feel free to:
 - Utilize the https://knowledge.udacity.com/ forum to seek help on content-specific issues.
 - [Submit a support ticket](https://udacity.zendesk.com/hc/en-us/requests/new) along with the link to your forked repository. 
