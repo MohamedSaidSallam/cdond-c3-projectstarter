@@ -1,13 +1,12 @@
 # UdaPeople
 
-## Screenshots
+## CI/CD Workflow
 
-![SCREENSHOT01](./screenshots/SCREENSHOT01.png)
-![SCREENSHOT02](./screenshots/SCREENSHOT02.png)
-![SCREENSHOT03](./screenshots/SCREENSHOT03.png)
-![SCREENSHOT04](./screenshots/SCREENSHOT04.png)
-![SCREENSHOT05](./screenshots/SCREENSHOT05.png)
-![SCREENSHOT06](./screenshots/SCREENSHOT06.png)
+![Workflow_01](Workflow_01.png)
+![Workflow_02](Workflow_02.png)
+
+## Submitted Screenshots
+
 ![SCREENSHOT07](./screenshots/SCREENSHOT07.png)
 ![SCREENSHOT08](./screenshots/SCREENSHOT08.png)
 ![SCREENSHOT09](./screenshots/SCREENSHOT09.png)
